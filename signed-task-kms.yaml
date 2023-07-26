@@ -1,0 +1,16 @@
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  annotations:
+    tekton.dev/signature: MEUCIQCPJuXrd6ap/1u7arey+ecCBNhe7AYUHjC1QmCISTKPMwIgeZ0wxqBVqvnVCkMTRiY9PMtloIQ7Ka9ZWtkvJZk/oy4=
+  creationTimestamp: null
+  name: example-task
+spec:
+  steps:
+  - args:
+    - Hello World
+    command:
+    - echo
+    image: ubuntu
+    name: echo
+    resources: {}

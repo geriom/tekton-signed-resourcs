@@ -14,4 +14,4 @@ spec:
           - name: revision
             value: main
           - name: pathInRepo
-            value: signed-task.yaml
+            value: signed-task-kms.yaml
