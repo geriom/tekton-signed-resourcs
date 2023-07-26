@@ -1,0 +1,17 @@
+apiVersion: tekton.dev/v1beta1
+kind: Pipeline
+metadata:
+  name: example-pipeline
+  namespace: trusted-resources
+spec:
+  tasks:
+    - name: example-task
+      taskRef:
+        resolver: git
+        params:
+          - name: url
+            value: https://github.com/geriom/tekton-signed-resourcs
+          - name: revision
+            value: main
+          - name: pathInRepo
+            value: signed-task.yaml
