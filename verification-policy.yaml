@@ -1,0 +1,13 @@
+apiVersion: tekton.dev/v1alpha1
+kind: VerificationPolicy
+metadata:
+  name: kms-policy
+  namespace: trusted-resources
+spec:
+  resources:
+    - pattern: "https://github.com/geriom/tekton-signed-resourcs"
+  authorities:
+    - name: kms
+      key:
+        kms: gcpkms://projects/gke-tests-314314/locations/us-east4/keyRings/tekton-keyring/cryptoKeys/tekton-key/cryptoKeyVersions/1
+  mode: enforce
