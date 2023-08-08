@@ -1,0 +1,14 @@
+apiVersion: tekton.dev/v1
+kind: PipelineRun
+metadata:
+  name: example-pipelinerun-kms
+spec:
+  pipelineRef:
+    resolver: git
+    params:
+      - name: url
+        value: https://github.com/geriom/tekton-signed-resourcs
+      - name: revision
+        value: main
+      - name: pathInRepo
+        value: signed-pipeline-kms.yaml

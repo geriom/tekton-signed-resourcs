@@ -2,7 +2,6 @@ apiVersion: tekton.dev/v1beta1
 kind: Pipeline
 metadata:
   name: example-pipeline
-  namespace: trusted-resources
 spec:
   tasks:
     - name: example-task
