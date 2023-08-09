@@ -2,7 +2,6 @@ apiVersion: tekton.dev/v1alpha1
 kind: VerificationPolicy
 metadata:
   name: kms-policy
-  namespace: trusted-resources
 spec:
   resources:
     - pattern: "https://github.com/geriom/tekton-signed-resourcs"
