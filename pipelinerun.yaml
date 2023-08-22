@@ -1,7 +1,7 @@
 apiVersion: tekton.dev/v1
 kind: PipelineRun
 metadata:
-  name: example-pipelinerun-kms
+  generateName: example-pipelinerun-
 spec:
   pipelineRef:
     resolver: git

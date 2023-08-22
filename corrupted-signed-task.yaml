@@ -7,9 +7,10 @@ metadata:
   name: example-task
 spec:
   steps:
-    - image: ubuntu
-      name: echo
-      command:
-        - echo
-      args:
-        - "Hello World"
+  - args:
+    - Hello World
+    command:
+    - echo
+    image: ubuntu
+    name: echo
+    resources: {}
