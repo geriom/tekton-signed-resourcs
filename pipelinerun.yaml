@@ -11,4 +11,4 @@ spec:
       - name: revision
         value: main
       - name: pathInRepo
-        value: signed-pipeline-kms.yaml
+        value: signed-pipeline-cosign.yaml
