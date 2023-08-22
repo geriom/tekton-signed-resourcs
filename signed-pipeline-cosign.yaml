@@ -1,0 +1,19 @@
+apiVersion: tekton.dev/v1beta1
+kind: Pipeline
+metadata:
+  annotations:
+    tekton.dev/signature: MEUCIQCens/XphFDmpu1rRygXegZFX8+9yMiyJwKgyh7JpJJgwIgXDSJQVNcQ0r88SsVXQ641aACyV9B+LDxknct57nxDVI=
+  creationTimestamp: null
+  name: example-pipeline
+spec:
+  tasks:
+  - name: example-task
+    taskRef:
+      params:
+      - name: url
+        value: https://github.com/geriom/tekton-signed-resourcs
+      - name: revision
+        value: main
+      - name: pathInRepo
+        value: signed-task-cosign.yaml
+      resolver: git
